@@ -2,7 +2,6 @@ import { motion, MotionValue } from 'framer-motion';
 import { FierySphere } from './FierySphere';
 import { TimelineItem } from './TimelineItem';
 import { timelineData } from '@/data/timeline';
-import { TIMELINE } from '@/constants';
 
 interface TimelineProps {
   timelineRef: React.RefObject<HTMLDivElement | null>;

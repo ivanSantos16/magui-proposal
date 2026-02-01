@@ -50,7 +50,7 @@ export const FierySphere = ({ scrollProgress }: FierySphereProps) => {
 
   const flameData = useMemo(
     () =>
-      flames.map((_, i) => {
+      flames.map((_) => {
         const angle = random(0, 360);
         const distance = random(15, 40);
         const color1 = randomFlameColor();
