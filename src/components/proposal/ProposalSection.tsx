@@ -21,7 +21,8 @@ export const ProposalSection = ({ onYes, onNo }: ProposalSectionProps) => {
         duration: 1.2,
         ease: [0.16, 1, 0.3, 1] // Apple's signature easing curve
       }}
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-0 mt-20"
+      className="relative flex flex-col items-center justify-center px-6 pt-20 pb-0 mt-20"
+      style={{ minHeight: 'calc(var(--vh, 1vh) * 100)' }}
     >
       {/* Subtle gradient overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-rose-950/10 to-transparent pointer-events-none" />
@@ -76,7 +77,8 @@ export const ProposalSection = ({ onYes, onNo }: ProposalSectionProps) => {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
-        className="absolute bottom-0 w-full text-white/40 text-sm font-light text-center pb-4"
+        className="absolute bottom-0 w-full text-white/40 text-sm font-light text-center"
+        style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom, 1rem))' }}
       >
         <p>© {new Date().getFullYear()} Made with ❤️</p>
         <p className="mt-1">All rights reserved</p>

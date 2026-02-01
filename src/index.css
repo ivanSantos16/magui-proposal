@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    /* Fix para iOS Safari - viewport height real */
+    --vh: 1vh;
+  }
+
   body {
     @apply bg-black text-white;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Fix para iOS viewport - previne scroll quando não há conteúdo */
+  html,
+  body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 }

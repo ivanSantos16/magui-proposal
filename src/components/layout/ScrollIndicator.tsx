@@ -3,8 +3,10 @@ import { ChevronDown } from 'lucide-react';
 
 export const ScrollIndicator = () => {
     const scrollToContent = () => {
+        // Usa a altura real do viewport para iOS
+        const vh = window.innerHeight;
         window.scrollTo({
-            top: window.innerHeight,
+            top: vh,
             behavior: 'smooth'
         });
     };
@@ -14,7 +16,8 @@ export const ScrollIndicator = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.6 }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
+            className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
+            style={{ bottom: 'max(2rem, env(safe-area-inset-bottom, 2rem))' }}
             onClick={scrollToContent}
         >
             <motion.p

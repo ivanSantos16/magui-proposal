@@ -2,10 +2,31 @@ import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 import { TEXT } from '@/constants';
 import { ScrollIndicator } from './ScrollIndicator';
+import { useEffect } from 'react';
 
 export const Header = () => {
+  // Fix para iOS Safari - calcula viewport height real
+  useEffect(() => {
+    const setVh = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    setVh();
+    window.addEventListener('resize', setVh);
+    window.addEventListener('orientationchange', setVh);
+
+    return () => {
+      window.removeEventListener('resize', setVh);
+      window.removeEventListener('orientationchange', setVh);
+    };
+  }, []);
+
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center relative">
+    <section
+      className="flex flex-col items-center justify-center text-center relative"
+      style={{ minHeight: 'calc(var(--vh, 1vh) * 100)' }}
+    >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
