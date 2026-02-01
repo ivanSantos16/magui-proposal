@@ -60,8 +60,8 @@ export const TimelineItem = memo(({ item }: TimelineItemProps) => {
                 <span className="text-8xl z-10">{item.content}</span>
               )}
             </motion.div>
-            <p className="text-white/70 mt-6 text-lg font-light">{item.caption}</p>
-            <p className="text-white/40 mt-2 text-sm">{item.date}</p>
+            <p className="text-white/70 mt-6 text-lg font-light text-center">{item.caption}</p>
+            <p className="text-white/40 mt-2 text-sm text-center">{item.date}</p>
           </motion.div>
         </div>
 
