@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { UI, TEXT } from '@/constants';
+import { TEXT } from '@/constants';
 
 interface ErrorAlertProps {
   show: boolean;
