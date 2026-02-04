@@ -21,7 +21,7 @@ export const ProposalSection = ({ onYes, onNo }: ProposalSectionProps) => {
         duration: 1.2,
         ease: [0.16, 1, 0.3, 1] // Apple's signature easing curve
       }}
-      className="relative flex flex-col items-center justify-center px-6 pt-20 pb-0 mt-20"
+      className="relative flex flex-col items-center justify-center px-6 pb-0 mt-20"
       style={{ minHeight: 'calc(var(--vh, 1vh) * 100)' }}
     >
       {/* Subtle gradient overlay for depth */}
@@ -31,8 +31,8 @@ export const ProposalSection = ({ onYes, onNo }: ProposalSectionProps) => {
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{
-          duration: 1,
-          delay: 0.3,
+          duration: 1.3,
+          delay: 0.6,
           ease: [0.16, 1, 0.3, 1]
         }}
         className="relative text-center max-w-xl"
@@ -44,7 +44,7 @@ export const ProposalSection = ({ onYes, onNo }: ProposalSectionProps) => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 1.1, delay: 0.9 }}
           className="text-white/60 mb-16 text-xl font-light"
         >
           {TEXT.PROPOSAL_HINT}
@@ -53,7 +53,7 @@ export const ProposalSection = ({ onYes, onNo }: ProposalSectionProps) => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 1.1, delay: 1.1 }}
           className="flex gap-4 justify-center items-center"
         >
           <Button
@@ -76,7 +76,7 @@ export const ProposalSection = ({ onYes, onNo }: ProposalSectionProps) => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
+        transition={{ duration: 1.1, delay: 1.5 }}
         className="absolute bottom-0 w-full text-white/40 text-sm font-light text-center"
         style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom, 1rem))' }}
       >

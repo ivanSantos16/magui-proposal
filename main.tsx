@@ -302,7 +302,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-center my-20"
+              className="text-center"
             >
               <h2 className="text-4xl font-light mb-6">Queres ser minha namorada?</h2>
               <p className="text-white/60 mb-12 text-lg">Escolhe sabiamente... ❤️</p>
