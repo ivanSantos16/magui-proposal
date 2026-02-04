@@ -3,6 +3,7 @@ import cinemaThumbnail from '@/assets/images/cinema_thumbnail.png';
 import porDoSol from "@/assets/images/por_do_sol.jpeg"
 import maguiCostas from "@/assets/images/magui_costas.png"
 import ivanMagui from "@/assets/images/ivan_maguii.jpeg"
+import maguiPerfil from "@/assets/images/magui-perfil.jpeg"
 
 export const timelineData: TimelineItemData[] = [
   {
@@ -11,7 +12,7 @@ export const timelineData: TimelineItemData[] = [
     content: '',
     image: cinemaThumbnail,
     caption: 'Onde tudo começou...',
-    date: 'Uma mãozinha que nunca me largou 😳'
+    date: 'Nem uma mãozinha suada afastou um coração receoso 😳'
   },
   {
     id: 'quote-1',
@@ -35,10 +36,11 @@ export const timelineData: TimelineItemData[] = [
     date: 'O por do sol e os teus beijos passaram a ser o nosso maior vicio 💉'
   },
   {
-    id: 'quote-2',
-    type: 'quote',
-    content: '"O amor não se vê com os olhos, mas com o coração"',
-    author: 'William Shakespeare'
+    id: 'memory-2',
+    type: 'memory',
+    title: 'Momentos inesquecíveis',
+    content: 'Muito possivelmente, dentro da piscina será o sitio onde estás mais confortável e és capaz de produzir a tua melhor linguagem de amor.',
+    emoji: '🐬'
   },
   {
     id: 'maguiCostas',
@@ -49,11 +51,10 @@ export const timelineData: TimelineItemData[] = [
     date: 'Potenciou todos os seus gestos marotos'
   },
   {
-    id: 'memory-2',
-    type: 'memory',
-    title: 'Momentos inesquecíveis',
-    content: 'Muito possivelmente, dentro da piscina será o sitio onde estás mais confortável e és capaz de produzir a tua melhor linguagem de amor.',
-    emoji: '🐬'
+    id: 'quote-2',
+    type: 'quote',
+    content: 'Flutuo nas ondas do teu conforto... o toque das tuas mãos... o mel dos teus lábios.',
+    author: 'O teu pequenino 🐥'
   },
   {
     id: 'ivanMagui',
@@ -61,20 +62,28 @@ export const timelineData: TimelineItemData[] = [
     image: ivanMagui,
     content: '',
     caption: 'Mas foi a nadar que eu me rendi 😳',
-    date: ''
+    date: 'Alguém passou o tempo a passar por debaixo de mim 🦦'
   },
   {
-    id: 'photo-3',
+    id: 'quote-4',
+    type: 'quote',
+    content: 'O trato que te caracteriza conquista o meu coração apaixonado',
+    author: 'O teu pequenino 🐥'
+  },
+  {
+    id: 'maguiPerfil',
+    type: 'photo',
+    image: maguiPerfil,
+    content: '',
+    caption: 'Por quem eu me rendo',
+    date: 'O teu sorriso desarma-me todo o dia 🥰'
+  },
+  {
+    id: 'photo-4',
     type: 'photo',
     content: '🌹',
     caption: 'Para ti',
     date: 'Com todo o meu amor'
-  },
-  {
-    id: 'quote-3',
-    type: 'quote',
-    content: '"Tu és a razão pela qual eu acredito no amor verdadeiro"',
-    author: 'Do fundo do meu coração'
   },
   {
     id: 'memory-3',
